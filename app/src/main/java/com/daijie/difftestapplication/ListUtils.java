@@ -8,7 +8,7 @@ import java.util.List;
 
 public class ListUtils {
 
-    public static int getSizeSafety(List list) {
+    public static int getSizeSafety(List<UserBean> list) {
         return list == null ? 0 : list.size();
     }
 }

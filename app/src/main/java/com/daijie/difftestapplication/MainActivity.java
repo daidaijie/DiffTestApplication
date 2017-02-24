@@ -76,10 +76,10 @@ public class MainActivity extends AppCompatActivity implements SwipeRefreshLayou
             // 文艺青年
             DiffUtil.DiffResult diffResult = DiffUtil.calculateDiff(
                     new UserDiffCallBack(mUsers, newUsers), true);
-            diffResult.dispatchUpdatesTo(mUserAdapter);
-
             mUsers = newUsers;
             mUserAdapter.setUsers(mUsers);
+
+            diffResult.dispatchUpdatesTo(mUserAdapter);
 
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();

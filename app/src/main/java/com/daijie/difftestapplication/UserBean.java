@@ -45,4 +45,20 @@ public class UserBean implements Cloneable {
         }
         return userBean;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        UserBean userBean = (UserBean) o;
+
+        return mName.equals(userBean.mName);
+
+    }
+
+    @Override
+    public int hashCode() {
+        return mName.hashCode();
+    }
 }

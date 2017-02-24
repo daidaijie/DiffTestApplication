@@ -33,7 +33,7 @@ public class UserDiffCallBack extends DiffUtil.Callback {
         UserBean oldUser = mOldUsers.get(oldItemPosition);
         UserBean newUser = mNewUsers.get(newItemPosition);
 
-        return oldUser.getName().equals(newUser.getName());
+        return oldUser.equals(newUser);
     }
 
     @Override
